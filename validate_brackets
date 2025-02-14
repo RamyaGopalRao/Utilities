@@ -1,0 +1,10 @@
+a=input()
+stack = [x for i, x in enumerate(a) if x in '[{()}]']
+print(stack)
+brackets = {'}': '{', ')': '(', ']': '['}
+for item in stack:
+    val=stack[-1]
+    if(item==brackets[val]):
+        stack.pop()
+    else:
+        print("False")
